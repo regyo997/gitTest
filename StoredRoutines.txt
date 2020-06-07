@@ -1,0 +1,23 @@
+
+DELIMITER $$
+CREATE PROCEDURE show_countries()
+SELECT * FROM world.country; $$
+DELIMITER ; 
+
+DELIMITER $$
+CREATE PROCEDURE show_countries()
+BEGIN
+SELECT * FROM world.country;
+END$$
+DELIMITER ; 
+
+call cmdev.my_world_country();
+
+DECLARE d,t,w VARCHAR(24)
+
+
+java呼叫 procedure
+用CallableStatement
+CS=Connection.prepareCall("{Call程序(?)}")
+CS.setString(1,"值");
+CS.execute();
