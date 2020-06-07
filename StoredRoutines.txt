@@ -1,4 +1,4 @@
-
+#test
 DELIMITER $$
 CREATE PROCEDURE show_countries()
 SELECT * FROM world.country; $$
